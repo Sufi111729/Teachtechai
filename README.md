@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ApprovalHub
 
 Admin/Teacher/Student approval system with Teacher Document AI (PDF/DOCX extraction + chunked search).
@@ -86,3 +87,7 @@ Frontend runs on `http://localhost:5173`.
 ## Postman Collection
 
 Import `postman_collection.json` in Postman.
+=======
+# Teachtechai
+This is ai which one is taking traning with teacher this is all unique ai which one is train by teachers..........................................
+>>>>>>> d74376b13604329debf376d7ea76157520e62c66
