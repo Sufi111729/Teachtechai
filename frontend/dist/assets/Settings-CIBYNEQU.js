@@ -1,0 +1,1 @@
+import{j as t}from"./index-CN1hkNaS.js";import{A as o}from"./AdminLayout-Dtl-kDgA.js";import{E as i}from"./EmptyState-KcKSc6Kb.js";import"./useQuery-C37Zs1O9.js";function m(){return t.jsx(o,{title:"Settings",children:t.jsx(i,{title:"Settings",description:"System configuration and access controls coming soon."})})}export{m as Settings};

@@ -1,0 +1,1 @@
+import{j as t}from"./index-CN1hkNaS.js";import{A as o}from"./AdminLayout-Dtl-kDgA.js";import{E as r}from"./EmptyState-KcKSc6Kb.js";import"./useQuery-C37Zs1O9.js";function m(){return t.jsx(o,{title:"Reports",children:t.jsx(r,{title:"Reports",description:"Reporting dashboard coming soon."})})}export{m as Reports};

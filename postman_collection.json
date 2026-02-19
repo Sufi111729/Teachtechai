@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "ApprovalHub API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Register Teacher",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "url": {"raw": "{{baseUrl}}/api/auth/register-teacher", "host": ["{{baseUrl}}"], "path": ["api", "auth", "register-teacher"]},
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Teacher One\",\n  \"email\": \"teacher1@school.com\",\n  \"password\": \"Pass@12345\",\n  \"teacherCode\": \"TCH-100\",\n  \"department\": \"Science\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Auth - Register Student",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "url": {"raw": "{{baseUrl}}/api/auth/register-student", "host": ["{{baseUrl}}"], "path": ["api", "auth", "register-student"]},
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Student One\",\n  \"email\": \"student1@school.com\",\n  \"password\": \"Pass@12345\",\n  \"rollNo\": \"R-100\",\n  \"teacherCode\": \"TCH-100\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "url": {"raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"]},
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@local.com\",\n  \"password\": \"Admin@12345\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Admin - Pending Teachers",
+      "request": {
+        "method": "GET",
+        "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+        "url": {"raw": "{{baseUrl}}/api/admin/pending/teachers", "host": ["{{baseUrl}}"], "path": ["api", "admin", "pending", "teachers"]}
+      }
+    },
+    {
+      "name": "Admin - Approve Teacher",
+      "request": {
+        "method": "PUT",
+        "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+        "url": {"raw": "{{baseUrl}}/api/admin/teachers/1/approve", "host": ["{{baseUrl}}"], "path": ["api", "admin", "teachers", "1", "approve"]}
+      }
+    },
+    {
+      "name": "Admin - Pending Students",
+      "request": {
+        "method": "GET",
+        "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+        "url": {"raw": "{{baseUrl}}/api/admin/pending/students", "host": ["{{baseUrl}}"], "path": ["api", "admin", "pending", "students"]}
+      }
+    },
+    {
+      "name": "Teacher - Pending Students",
+      "request": {
+        "method": "GET",
+        "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+        "url": {"raw": "{{baseUrl}}/api/teacher/pending-students", "host": ["{{baseUrl}}"], "path": ["api", "teacher", "pending-students"]}
+      }
+    },
+    {
+      "name": "Teacher - Upload Document",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+        "url": {"raw": "{{baseUrl}}/api/teacher/documents/upload", "host": ["{{baseUrl}}"], "path": ["api", "teacher", "documents", "upload"]},
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {"key": "title", "value": "Biology Notes", "type": "text"},
+            {"key": "file", "type": "file", "src": ""}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Teacher - List Documents",
+      "request": {
+        "method": "GET",
+        "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+        "url": {"raw": "{{baseUrl}}/api/teacher/documents", "host": ["{{baseUrl}}"], "path": ["api", "teacher", "documents"]}
+      }
+    },
+    {
+      "name": "Teacher - Ask Document",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Authorization", "value": "Bearer {{token}}"},
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "url": {"raw": "{{baseUrl}}/api/teacher/documents/1/ask", "host": ["{{baseUrl}}"], "path": ["api", "teacher", "documents", "1", "ask"]},
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"What is photosynthesis?\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Student - Me",
+      "request": {
+        "method": "GET",
+        "header": [{"key": "Authorization", "value": "Bearer {{token}}"}],
+        "url": {"raw": "{{baseUrl}}/api/student/me", "host": ["{{baseUrl}}"], "path": ["api", "student", "me"]}
+      }
+    }
+  ],
+  "variable": [
+    {"key": "baseUrl", "value": "http://localhost:8080"},
+    {"key": "token", "value": ""}
+  ]
+}

@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background:
+    radial-gradient(1200px 900px at 12% -10%, rgba(30, 94, 255, 0.18), transparent 55%),
+    radial-gradient(900px 700px at 90% 8%, rgba(255, 138, 61, 0.2), transparent 60%),
+    radial-gradient(700px 600px at 30% 90%, rgba(15, 118, 110, 0.12), transparent 55%),
+    repeating-radial-gradient(circle at 20% 20%, rgba(12, 16, 32, 0.04), rgba(12, 16, 32, 0.04) 1px, transparent 1px, transparent 28px),
+    #fffaf2;
+  color: #1b2033;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Fraunces", serif;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: riseIn 0.7s ease-out both;
+}
+
+.reveal-1 {
+  animation-delay: 0.05s;
+}
+
+.reveal-2 {
+  animation-delay: 0.15s;
+}
+
+.reveal-3 {
+  animation-delay: 0.25s;
+}

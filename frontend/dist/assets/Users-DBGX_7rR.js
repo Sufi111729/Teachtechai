@@ -1,0 +1,1 @@
+import{j as t}from"./index-CN1hkNaS.js";import{A as r}from"./AdminLayout-Dtl-kDgA.js";import{E as e}from"./EmptyState-KcKSc6Kb.js";import"./useQuery-C37Zs1O9.js";function n(){return t.jsx(r,{title:"Users",children:t.jsx(e,{title:"User management",description:"User directory and role management coming soon."})})}export{n as Users};

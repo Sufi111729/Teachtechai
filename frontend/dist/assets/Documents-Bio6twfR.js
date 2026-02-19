@@ -1,0 +1,1 @@
+import{j as t}from"./index-CN1hkNaS.js";import{A as o}from"./AdminLayout-Dtl-kDgA.js";import{E as m}from"./EmptyState-KcKSc6Kb.js";import"./useQuery-C37Zs1O9.js";function s(){return t.jsx(o,{title:"Documents",children:t.jsx(m,{title:"Document library",description:"Centralized document management coming soon."})})}export{s as Documents};
